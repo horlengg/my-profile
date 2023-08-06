@@ -541,8 +541,8 @@ video {
   box-sizing: border-box;
   padding: 0px;
   font-family: 'Roboto';
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
@@ -551,13 +551,6 @@ video {
 :is(.dark *){
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
-@media (min-width: 640px){
-  *{
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
 }
 
 body{
