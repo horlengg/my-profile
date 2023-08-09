@@ -1,6 +1,10 @@
 html {
     scroll-behavior: smooth;
 }
+.profile-image {
+    border-radius: 50%;
+    margin: auto;
+}
 .show-nav {
     top: 4rem;
     opacity: 1;
