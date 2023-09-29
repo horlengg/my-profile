@@ -1,16 +1,7 @@
 const imageWrapper = document.querySelector('.image-wrapper');
-const imageTitle = document.querySelector(".img-title");
-const images = [
-    {imgTitle:"developer_team.jpg",title:"Traning Program នៅធានាគាអេភីឌី(APD bank)!"},
-    {imgTitle:"drama.jpg",title:"ដឺងថាគេថតហើយទៀបប្រឺងសំដែង"},
-    {imgTitle:"developer_team2.jpg",title:"មិត្តរួមការងារនៅធានាគាអេភីឌី(APD bank)!."},
-    {imgTitle:"best_friend.jpg",title:"មិត្តភក្តិ​ មិត្តរួមបាយវត្ត​ មិត្តធ្លាប់ផ្លស់របងសាលា មិត្តធ្លាប់គ្រូមិនឲចូលរៀនព្រោះបាយបាន!."},
-    {imgTitle:"img_01.jpg",title:"រៀនមិនប្រឺងទេប្រឺងតែសាកថ្មរជីវិតមួយថ្ងៃៗ!"},
-    {imgTitle:"img_02.jpg",title:"គេគ្រប់គ្នាទៅប្រលងយប់ឡើងគេមើលសៀវភៅ ឯងវិញល្ងាចដើរលេងព្រឺកឡើងឈឺប៊ឹសអត់បានប្រលង!"},
-    {imgTitle:"img_03.jpg",title:"ពេលមកដល់សាលាដំបូងសន្យានឹងខ្លួនឯងថានឺងខំរៀន Hack!"},
-];
+const images = [ "developer_team.jpg","drama.jpg","developer_team2.jpg","best_friend.jpg","img_01.jpg","img_02.jpg","img_03.jpg"]
 let currentImageIndex = 0 ;
-displayImage(images[currentImageIndex].imgTitle,images[currentImageIndex].title);
+displayImage(images[currentImageIndex]);
 setInterval(()=>{
     createBackground() ;
 },100) ;
@@ -19,12 +10,11 @@ setInterval(()=>{
         currentImageIndex = 0;
     else
         currentImageIndex ++ ;
-    displayImage(images[currentImageIndex].imgTitle,images[currentImageIndex].title);
+    displayImage(images[currentImageIndex]);
 },5000) ;
 
 function displayImage(path,title){
     const imageElement = document.createElement('img');
-    imageTitle.textContent = title ;
     imageElement.setAttribute('class','img');
     imageElement.src = `./image/${path}`
     imageWrapper.appendChild(imageElement) ;
